@@ -1,13 +1,7 @@
-## _Despliegue en Heroku_ 
-[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://evening-shelf-74618.herokuapp.com/)
- ## _Integración continua_ 
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://app.circleci.com/pipelines/github/sebastianNietoMolina/AREP-lab2)
 
-# INTRODUCTION TO COMPLEX SYSTEMS, JAVA, MVN, AND GIT
+# Intro to ReactJS
 
-Este proyecto busca implementar la media y la desviación estándar haciendo uso de LinkedList, en particular esta debe ser creada por nosotros, y debe ser compatible con la interface List, además, hacemos uso del micro-framework Spark y de la herramienta heroku para poder desplegar nuestra pagina web. Para ello hacemos uso de estructura de datos para manejar los nodos correctamente y poder implementar la lista. [Aquí](Desing.pdf) puede encontrar el informe con mayor detalle. 
-
-NOTA: Al principio debe dar clic 2 veces en el botón get value para que le aparezca el valor correspondiente, no debe dar muchos clic seguidos rápidamente, esto hará que el programa no funcione apropiadamente, procure que haya termino de calcular para dar clic otra vez.
+Este laboratorio tiene como finalidad introducirnos a los conceptos clave para manejar ReactJS, principalmente hacemos manejo de los componentes, manejo de props y map por ejemplo.
 
 ## Comenzando 🚀
 
@@ -17,93 +11,64 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 Para poder hacer uso de este proyecto se debe tener instalado:
  
-  * MVN
+  * NodeJs
   * Git
-  * Java
-  * HerokuCli (En caso de querer desplegar el proyecto localmente)
 
 ### Instalación 🔧
 
 Lo primero que debe hacer es descargar el proyecto, lo pude hacer directamente descargando el .zip, o puede clonar el archivo con el siguiente comando.
 
 ```
-git clone https://github.com/sebastianNietoMolina/AREP-lab2.git
+git clone https://github.com/sebastianNietoMolina/IETI-lab1.git
 ```
 
 Entramos al directorio del proyecto con el comando
 
 ```
-cd AREP-lab2
+cd todo-app
 ```
 
-Luego debe ingresar el siguiente comando para que se ejectue hasta la fase de empaquetamiento, debe asegurar que antes de ingresar este comando, que exista en la carpeta que esta un archivo llamado pom.xml
+Ejecutamos los siguientes comandos para poder ver el proyecto, en particular, como el ultimo commit que se hizo fue del tercer punto, vean el formulario para subir los datos. Esto puede tardar varios minutos, cuando ejecute el segundo comando se abrirá una ventana y podrá interactuar con la aplicación.
 
 ```
-mvn package
+npm install
+npm start
 ```
 
-Tambien me gustaria aclarar que puedes descargar el javaDoc, este quedara guardado en una carpeta target, esta se genera una vez echo el comando anterior, y con el siguiente comando se creara la carpeta site, la ruta sera target/site.
+## Parte 1
+
+Para esta primera parte nos pedía crear una aplicación básica react, en particular tuve el problema de que el comando que mostrare a continuación no me permitía ejecutar.
 
 ```
-mvn javadoc:javadoc
+npx create-react-app todo-app
 ```
-
-Si desea correr heroku localmente, hay un archivo que se llama Procfile, si su sistema operativo es Linux, use el siguiente comando.
-
-```
-web: java $JAVA_OPTS -cp target/classes:target/dependency/* edu.escuelaing.arep.app.App
-```
-
-Si falla agrega lo siguiente
+Para resolver este problema encontré en internet la siguiente solución, anexo la página [aquí](https://github.com/facebook/create-react-app/issues/9091), Al cual pude resolver usando el siguiente comando.
 
 ```
-web: java $JAVA_OPTS -cp "target/classes:target/dependency/*" edu.escuelaing.arep.app.App
-```
-Si usa windows use el siguiente comando.
-
-```
-web: java -cp target/classes;target/dependency/* edu.escuelaing.arep.app.App
+npm install -g create-react-app
 ```
 
-Recuerde que para ver heroku localmente debe ingresar el siguiente comando en cmd 
+Principalmente se adjunta la imagen de los primeros 2 módulos pedidos (JSX and React Components) 
+![](fotos/curso.PNG)
 
-```
-heroku local web
-```
-Posteriormente debe escribir el siguiente link en su buscador: localhost:5000
+## Part 2
 
-![](https://github.com/sebastianNietoMolina/AREP-lab2/blob/main/fotos/herokuLocal.PNG)
+Esta segunda parte requería que aprendiéramos a manejar los componentes de tal forma que pudiéramos comunicarnos en diferentes archivos js. 
+![](fotos/parte2.PNG)
 
-Si por el contrario solo ejecuto el programa desde el main, o por comando, debe escribir el siguiente link en su buscador: localhost:4567
+## Parte 3
 
-Acá dejo una lista de como puede ingresar los datos para poder sacar la media o deviación estándar.
-```
-160,591,114,229,230,270,128,1657,624,1503
-```
-
-## Ejecutando las pruebas ⚙️
-
-El anterior comando mvn package ya ejecuta las pruebas, pero si desea verlas por aparte puede ejecutar el siguiente comando.
-
-```
-mvn test.
-```
-
-### Analice las pruebas end-to-end 🔩
-
-Se puede evidenciar cuando pasan las pruebas, no se deben ejecutar varias al mismo tiempo, puede ocasionar que no pase, pero de forma secuencial lo lograra.
-
-![](https://github.com/sebastianNietoMolina/AREP-lab2/blob/main/fotos/prueba.PNG)
+Esta ultima parte ya nos pedía interactuar más con los componentes, además del tercer modulo del curso anteriormente mencionado.
+![](fotos/parte3.PNG)
+![](fotos/curso2.PNG)
 
 ## Autores ✒️
-
-_Menciona a todos aquellos que ayudaron a levantar el proyecto desde sus inicios_
 
 * **Sebastian Nieto** - [sebastianNieto](https://github.com/sebastianNietoMolina)
 
 ## Licencia 📄
 
-Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](LICENSE.md) para detalles
+Este proyecto está bajo la Licencia MIT - mira el archivo [LICENSE.md](todo-app/LICENSE.md) para detalles
 
 ## Expresiones de Gratitud 🎁
 
